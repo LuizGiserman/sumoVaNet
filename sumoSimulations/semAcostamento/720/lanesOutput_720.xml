@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu May 23 17:18:36 2019 by SUMO Version 0.32.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./semAcostamento/base.net.xml"/>
+        <route-files value="./semAcostamento/base.rou.xml"/>
+        <additional-files value="./semAcostamento/720/additional720.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="720"/>
+    </time>
+
+</configuration>
+-->
+
+<meandata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/meandata_file.xsd">
+    <interval begin="0.00" end="720.00" id="myLanes">
+        <edge id="1">
+            <lane id="1_0" sampledSeconds="3735.16" traveltime="48.95" overlapTraveltime="49.85" density="25.94" occupancy="12.84" waitingTime="22.00" speed="4.11" departed="78" arrived="0" entered="0" left="82" laneChangedFrom="5" laneChangedTo="16"/>
+            <lane id="1_1" sampledSeconds="3538.45" traveltime="50.72" overlapTraveltime="51.60" density="24.57" occupancy="12.20" waitingTime="9.00" speed="3.97" departed="76" arrived="0" entered="0" left="60" laneChangedFrom="16" laneChangedTo="5"/>
+        </edge>
+        <edge id="2">
+            <lane id="2_0" sampledSeconds="6524.08" traveltime="80.58" overlapTraveltime="85.86" density="45.31" occupancy="22.04" waitingTime="133.00" speed="2.39" departed="0" arrived="0" entered="82" left="57" laneChangedFrom="27" laneChangedTo="16"/>
+            <lane id="2_1" sampledSeconds="6164.36" traveltime="102.61" overlapTraveltime="108.90" density="42.81" occupancy="20.85" waitingTime="110.00" speed="1.88" departed="0" arrived="0" entered="60" left="56" laneChangedFrom="16" laneChangedTo="27"/>
+        </edge>
+        <edge id="3">
+            <lane id="3_0" sampledSeconds="2929.70" traveltime="44.39" overlapTraveltime="45.14" density="20.35" occupancy="9.42" waitingTime="0.00" speed="4.54" departed="0" arrived="72" entered="56" left="0" laneChangedFrom="0" laneChangedTo="21"/>
+            <lane id="3_1" sampledSeconds="2124.84" traveltime="50.14" overlapTraveltime="51.06" density="14.76" occupancy="6.66" waitingTime="0.00" speed="4.01" departed="0" arrived="33" entered="56" left="0" laneChangedFrom="21" laneChangedTo="0"/>
+        </edge>
+    </interval>
+</meandata>

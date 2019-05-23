@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu May 23 17:18:36 2019 by SUMO Version 0.32.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./semAcostamento/base.net.xml"/>
+        <route-files value="./semAcostamento/base.rou.xml"/>
+        <additional-files value="./semAcostamento/800/additional800.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="800"/>
+    </time>
+
+</configuration>
+-->
+
+<meandata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/meandata_file.xsd">
+    <interval begin="0.00" end="800.00" id="myEdges">
+        <edge id="1" sampledSeconds="8111.54" traveltime="49.76" overlapTraveltime="50.69" density="50.70" occupancy="12.56" waitingTime="34.00" speed="4.04" departed="171" arrived="0" entered="0" left="161" laneChangedFrom="23" laneChangedTo="23"/>
+        <edge id="2" sampledSeconds="15363.33" traveltime="98.09" overlapTraveltime="103.90" density="96.02" occupancy="23.41" waitingTime="289.00" speed="1.97" departed="0" arrived="0" entered="161" left="126" laneChangedFrom="46" laneChangedTo="46"/>
+        <edge id="3" sampledSeconds="5707.30" traveltime="46.74" overlapTraveltime="47.55" density="35.67" occupancy="8.17" waitingTime="0.00" speed="4.31" departed="0" arrived="118" entered="126" left="0" laneChangedFrom="24" laneChangedTo="24"/>
+    </interval>
+</meandata>

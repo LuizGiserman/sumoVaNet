@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu May 23 17:18:34 2019 by SUMO Version 0.32.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./semAcostamento/base.net.xml"/>
+        <route-files value="./semAcostamento/base.rou.xml"/>
+        <additional-files value="./semAcostamento/80/additional80.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="80"/>
+    </time>
+
+</configuration>
+-->
+
+<meandata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/meandata_file.xsd">
+    <interval begin="0.00" end="80.00" id="myLanes">
+        <edge id="1">
+            <lane id="1_0" sampledSeconds="292.98" traveltime="53.40" overlapTraveltime="54.05" density="18.31" occupancy="9.11" waitingTime="2.00" speed="3.79" departed="9" arrived="0" entered="0" left="5" laneChangedFrom="0" laneChangedTo="1"/>
+            <lane id="1_1" sampledSeconds="283.67" traveltime="59.32" overlapTraveltime="60.27" density="17.73" occupancy="8.83" waitingTime="0.00" speed="3.40" departed="9" arrived="0" entered="0" left="3" laneChangedFrom="1" laneChangedTo="0"/>
+        </edge>
+        <edge id="2">
+            <lane id="2_0" sampledSeconds="99.81" traveltime="22.10" overlapTraveltime="24.18" density="6.24" occupancy="3.01" waitingTime="2.00" speed="8.48" departed="0" arrived="0" entered="5" left="2" laneChangedFrom="0" laneChangedTo="1"/>
+            <lane id="2_1" sampledSeconds="27.20" traveltime="22.84" overlapTraveltime="23.41" density="1.70" occupancy="0.82" waitingTime="0.00" speed="8.76" departed="0" arrived="0" entered="3" left="0" laneChangedFrom="1" laneChangedTo="0"/>
+        </edge>
+        <edge id="3">
+            <lane id="3_0" sampledSeconds="17.21" traveltime="95.94" overlapTraveltime="98.34" density="1.08" occupancy="0.41" waitingTime="0.00" speed="2.08" departed="0" arrived="0" entered="2" left="0" laneChangedFrom="0" laneChangedTo="0"/>
+            <lane id="3_1" sampledSeconds="0.00" departed="0" arrived="0" entered="0" left="0" laneChangedFrom="0" laneChangedTo="0"/>
+        </edge>
+    </interval>
+</meandata>
