@@ -10,7 +10,7 @@ echo ./genFiles.py
 
 for directory in "${directories[@]}";
 do
-  for value in {20..1001..20}
+  for value in {20..6001..20}
   do
 
     echo sumo -c ./$directory/base.sumocfg -e$value --additional-files ./$directory/$value/additional$value.xml
