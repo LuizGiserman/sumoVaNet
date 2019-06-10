@@ -2,11 +2,10 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
 #comAcostamento
 
 #simulation times
-timeValues = [int(index) for index in range(20, 6001, 20)]
+timeValues = [int(index) for index in range(20, 10001, 20)]
 #filePointers for the files
 edgePointers = []
 lanePointers = []
@@ -82,6 +81,7 @@ ax.set_xlabel("Tempo de simulação (ms)")
 ax.set_ylabel("Densidade (veh/km)")
 plt.show()
 
+show()
 
 
 #Traffic volume at the end of the lane / edge (#/h) = 3600 * left / period

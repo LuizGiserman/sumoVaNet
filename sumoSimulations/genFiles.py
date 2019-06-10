@@ -5,8 +5,8 @@ import subprocess
 import tempfile
 
 index = ''
-directories = ['comAcostamento/']#, 'semAcostamento/'] #'comSaidas/', 'comSaidasEntradas/', ]
-endValues = [int(index) for index in range(20, 6001	, 20)]
+directories = ['comAcostamento/', 'semAcostamento/'] #'comSaidas/', 'comSaidasEntradas/', ]
+endValues = [int(index) for index in range(6020, 10001	, 20)]
 
 for directory in directories:
 	for value in endValues:
