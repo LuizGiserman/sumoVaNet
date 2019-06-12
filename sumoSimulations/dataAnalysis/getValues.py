@@ -21,7 +21,7 @@ dict = {}
 for time in timeValues:
     #file names
     auxEdges = "../comAcostamento/{}/edgesOutput_{}.xml".format(time, time)
-    auxLanes = "../semAcostamento/{}/lanesOutput_{}.xml".format(time, time)
+    auxLanes = "../comAcostamento/{}/lanesOutput_{}.xml".format(time, time)
     #opening all files
     #fpEdges = open(auxEdges, "r")
     #edgePointers.append(fpEdges)
@@ -34,55 +34,66 @@ for fp in lanePointers:
     laneSoup.append(soup)
 
 #finding every density in all of the files
-dataFrame = pd.DataFrame()
-s = pd.Series()
-dictLocal = {}
+dictDensities = {}
+dict_wait_times = {}
 for count in range(len(laneSoup)):
     densities = []
-    ids = []
+    waiting_times=[]
     for lane in laneSoup[count].find_all('lane'):
         #density value per id
         density = lane.get('density')
+        wait_time = lane.get('waitingtime')
         id = lane.get('id')
+        #print("{} : {}".format(id, wait_time))
         #replace None with zero
         if (density == None):
             density = 0
-        #list of densities and ids
+        if (wait_time == None):
+            wait_time = 0
+        #list of densities and waitingTime
         densities.append(density)
-        ids.append(id)
+        waiting_times.append(wait_time)
         ##### creating the dict ####
-        ## dict needs to be of type {id: list of density values for that id in all files, in order, ...} ##
+        ## dict needs to be {id: [density values for that id in all files, in order],  ...} ##
         if (count == 0):
-            aux = [density]
-            dictLocal[str(id)] = aux
+            dictDensities[str(id)] = [density]
+            dict_wait_times[str(id)] = [wait_time]
         else:
-            auxiliar = dictLocal[str(id)]
-            #add density from current lane to the list
-            auxiliar.append(density)
+            #In this tuple, both auxiliar variables turn into a list, since dict[id] is storing a list created in the if
+            auxiliarDensity, auxiliar_wait_time = dictDensities[str(id)], dict_wait_times[str(id)]
+            #add density and waiting time from current lane to the list
+            auxiliarDensity.append(density)
+            auxiliar_wait_time.append(wait_time)
             #update the dict with the updated list
-            dictLocal[str(id)] = auxiliar
+            dictDensities[str(id)], dict_wait_times[str(id)] = auxiliarDensity, auxiliar_wait_time
 
 
-#dataFrame
-dataFrame = pd.DataFrame(dictLocal, index=timeValues)
-
-#print dict
-print("{}\n\n".format(dictLocal))
-
-
-
+#Dataframes
+data_frame_densities = pd.DataFrame(dictDensities, index=timeValues)
+data_frame_waiting_times = pd.DataFrame(dict_wait_times, index=timeValues)
+#print dicts
+# print("{}\n\n".format(dictDensities))
+# print("{}\n\n".format(dict_wait_times))
 
 
-#dataFrame.replace({None : 0}, inplace=True)
-print(dataFrame)
-dataFrame = dataFrame.astype(float)
-ax = dataFrame.plot(title='Densidade')
+
+# print(data_frame_waiting_times)
+print (data_frame_densities)
+# data_frame_waiting_times.'1_0' = pd.to_numeric(data_frame_waiting_times.'1_0')
+#
+data_frame_waiting_times = data_frame_waiting_times.astype(float)
+ax = data_frame_waiting_times.plot(title='Waiting time com acostamento')
 ax.set_xlabel("Tempo de simulação (ms)")
-ax.set_ylabel("Densidade (veh/km)")
+ax.set_ylabel("Waiting Time (ms)")
 plt.show()
-
-show()
-
+#
+# # print(data_frame_densities)
+# data_frame_densities = data_frame_densities.astype(float)
+# ad = data_frame_densities.plot(title='Densidade')
+# ad.set_xlabel("Tempo de simulação (ms)")
+# ad.set_ylabel("Densidade (veh/km)")
+#
+# plt.show()
 
 #Traffic volume at the end of the lane / edge (#/h) = 3600 * left / period
 #Traffic volume at the begin of the lane / edge (#/h) = 3600 * entered / period
