@@ -2,7 +2,7 @@
 
 readonly numDirectories=4
 
-declare -a directories=("comAcostamento/lc2013") #"semAcostamento") # "semAcostamento") #"comSaidas" "comSaidasEntradas" )
+declare -a directories=("semAcostamento/lc2013") #"semAcostamento") # "semAcostamento") #"comSaidas" "comSaidasEntradas" )
 
 
 echo ./genFiles.py
