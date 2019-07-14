@@ -20,8 +20,8 @@ dict = {}
 
 for time in timeValues:
     #file names
-    auxEdges = "../comAcostamento/{}/edgesOutput_{}.xml".format(time, time)
-    auxLanes = "../comAcostamento/{}/lanesOutput_{}.xml".format(time, time)
+    auxEdges = "../comAcostamento/lc2013/{}/edgesOutput_{}.xml".format(time, time)
+    auxLanes = "../comAcostamento/lc2013/{}/lanesOutput_{}.xml".format(time, time)
     #opening all files
     #fpEdges = open(auxEdges, "r")
     #edgePointers.append(fpEdges)
@@ -87,13 +87,13 @@ ax.set_xlabel("Tempo de simulação (ms)")
 ax.set_ylabel("Waiting Time (ms)")
 plt.show()
 #
-# # print(data_frame_densities)
-# data_frame_densities = data_frame_densities.astype(float)
-# ad = data_frame_densities.plot(title='Densidade')
-# ad.set_xlabel("Tempo de simulação (ms)")
-# ad.set_ylabel("Densidade (veh/km)")
-#
-# plt.show()
+# print(data_frame_densities)
+data_frame_densities = data_frame_densities.astype(float)
+ad = data_frame_densities.plot(title='Densidade')
+ad.set_xlabel("Tempo de simulação (ms)")
+ad.set_ylabel("Densidade (veh/km)")
+
+plt.show()
 
 #Traffic volume at the end of the lane / edge (#/h) = 3600 * left / period
 #Traffic volume at the begin of the lane / edge (#/h) = 3600 * entered / period
