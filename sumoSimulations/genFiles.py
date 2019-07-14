@@ -5,8 +5,8 @@ import subprocess
 import tempfile
 
 index = ''
-directories = ['comAcostamento/', 'semAcostamento/'] #'comSaidas/', 'comSaidasEntradas/', ]
-endValues = [int(index) for index in range(6020, 10001	, 20)]
+directories = ['comAcostamento/lc2013/']#, 'semAcostamento/'] #'comSaidas/', 'comSaidasEntradas/', ]
+endValues = [int(index) for index in range(20, 10001, 20)]
 
 for directory in directories:
 	for value in endValues:
@@ -23,10 +23,10 @@ for directory in directories:
 		f.write('<additional>\n')
 		f.write('\t<edgeData id="myEdges" file="edgesOutput_' + str(value) + '.xml"/>\n')
 		f.write('\t<laneData id="myLanes" file="lanesOutput_' + str(value) + '.xml"/>\n')
-		f.write('\t<entryExitDetector id="malEducado" freq="1" file="detectorOutput_{}.xml" timeThreshold="1" speedThreshold/>\n'.format(str(value)))
-		f.write('\t\t<detEntry lane="2_2" pos="0" friendlyPos="True"/>\n')
-		f.write('\t\t<detExit lane="2_2" pos="0" friendlyPos="True"/>\n')
-		f.write('\t</EntryExitDetector>\n')
+		# f.write('\t<entryExitDetector id="malEducado" freq="1" file="detectorOutput_{}.xml" timeThreshold="1" speedThreshold/>\n'.format(str(value)))
+		# f.write('\t\t<detEntry lane="2_2" pos="0" friendlyPos="True"/>\n')
+		# f.write('\t\t<detExit lane="2_2" pos="0" friendlyPos="True"/>\n')
+		# f.write('\t</EntryExitDetector>\n')
 		f.write('</additional>')
 
 		#moving additional file

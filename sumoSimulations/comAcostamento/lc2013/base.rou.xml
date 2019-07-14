@@ -1,0 +1,15 @@
+<routes>
+
+	<vType id="Car"  accel="0.2" decel="4.5" maxSpeed="10" departLane="random"/>
+	<vType id="Car2" accel="0.3" decel="4.8" maxSpeed="20" departLane="random"/>
+
+	<flow id="swarm1" color="0,0,1" begin="0" probability="0.8" departLane="random" type="Car">
+		<route edges="1 2 3 4"/>
+	</flow>
+
+	<flow id="swarm2" color="0,1,0" begin="0"  probability="0.5" departLane="random" type="Car2">
+		<route edges="1 2 3 4"/>
+	</flow>
+
+
+</routes>
