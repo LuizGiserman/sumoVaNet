@@ -82,14 +82,14 @@ print (data_frame_densities)
 # data_frame_waiting_times.'1_0' = pd.to_numeric(data_frame_waiting_times.'1_0')
 #
 data_frame_waiting_times = data_frame_waiting_times.astype(float)
-ax = data_frame_waiting_times.plot(title='Waiting time com acostamento')
+ax = data_frame_waiting_times.plot(title='Waiting Time sem acostamento (LC2013)')
 ax.set_xlabel("Tempo de simulação (ms)")
 ax.set_ylabel("Waiting Time (ms)")
 plt.show()
 #
 # print(data_frame_densities)
 data_frame_densities = data_frame_densities.astype(float)
-ad = data_frame_densities.plot(title='Densidade')
+ad = data_frame_densities.plot(title='Densidade (LC2013)')
 ad.set_xlabel("Tempo de simulação (ms)")
 ad.set_ylabel("Densidade (veh/km)")
 
