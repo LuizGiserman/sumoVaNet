@@ -20,8 +20,8 @@ dict = {}
 
 for time in timeValues:
     #file names
-    auxEdges = "../comAcostamento/lc2013/{}/edgesOutput_{}.xml".format(time, time)
-    auxLanes = "../comAcostamento/lc2013/{}/lanesOutput_{}.xml".format(time, time)
+    auxEdges = "../semAcostamento/lc2013/{}/edgesOutput_{}.xml".format(time, time)
+    auxLanes = "../semAcostamento/lc2013/{}/lanesOutput_{}.xml".format(time, time)
     #opening all files
     #fpEdges = open(auxEdges, "r")
     #edgePointers.append(fpEdges)
