@@ -5,7 +5,7 @@ import subprocess
 import tempfile
 
 index = ''
-directories = ['semAcostamento/lc2013/', 'semAcostamento/aggressive']# 'comAcostamento/lc2013', 'comAcostamento/aggressive']#, 'semAcostamento/'] #'comSaidas/', 'comSaidasEntradas/', ]
+directories = ['comAcostamento/lc2013', 'comAcostamento/aggressive']#, 'semAcostamento/'] #'comSaidas/', 'comSaidasEntradas/', ]
 endValues = [int(index) for index in range(20, 300001, 20)]
 
 for directory in directories:
