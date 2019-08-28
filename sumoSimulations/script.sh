@@ -2,7 +2,7 @@
 
 readonly numDirectories=4
 
-declare -a directories=("semAcostamento/lc2013 semAcostamento/aggressive ") #comAcostamento/lc2013 comAcostamento/aggressive") #"semAcostamento") # "semAcostamento") #"comSaidas" "comSaidasEntradas" )
+declare -a directories=("semAcostamento/aggressive") # "semAcostamento/aggressive") #comAcostamento/lc2013 comAcostamento/aggressive") #"semAcostamento") # "semAcostamento") #"comSaidas" "comSaidasEntradas" )
 
 
 echo ./genFiles.py
@@ -10,7 +10,7 @@ echo ./genFiles.py
 
 for directory in "${directories[@]}";
 do
-  for value in {0..300001..20}
+  for value in {0..84501..20}
   do
 
     echo sumo -c ./$directory/base.sumocfg -e$value --additional-files ./$directory/$value/additional$value.xml

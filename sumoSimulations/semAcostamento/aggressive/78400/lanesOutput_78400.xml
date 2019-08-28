@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu Aug 22 00:06:24 2019 by SUMO Version 0.28.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./semAcostamento/aggressive/base.net.xml"/>
+        <route-files value="./semAcostamento/aggressive/base.rou.xml"/>
+        <additional-files value="./semAcostamento/aggressive/78400/additional78400.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="78400"/>
+    </time>
+
+</configuration>
+-->
+
+<meandata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/meandata_file.xsd">
+    <interval begin="0.00" end="78400.00" id="myLanes">
+        <edge id="1">
+            <lane id="1_0" sampledSeconds="1495590.03" traveltime="234.48" overlapTraveltime="240.37" density="95.38" occupancy="47.69" waitingTime="14062.76" speed="0.85" departed="6369" arrived="0" entered="0" left="6422" laneChangedFrom="17" laneChangedTo="89"/>
+            <lane id="1_1" sampledSeconds="1493462.95" traveltime="236.21" overlapTraveltime="242.25" density="95.25" occupancy="47.62" waitingTime="14032.31" speed="0.85" departed="6354" arrived="0" entered="0" left="6263" laneChangedFrom="89" laneChangedTo="17"/>
+        </edge>
+        <edge id="2">
+            <lane id="2_0" sampledSeconds="1568612.39" traveltime="239.04" overlapTraveltime="245.14" density="100.04" occupancy="50.02" waitingTime="10675.50" speed="0.84" departed="0" arrived="0" entered="6422" left="6353" laneChangedFrom="99" laneChangedTo="50"/>
+            <lane id="2_1" sampledSeconds="1564406.64" traveltime="243.45" overlapTraveltime="249.69" density="99.77" occupancy="49.89" waitingTime="10829.72" speed="0.82" departed="0" arrived="0" entered="6263" left="6292" laneChangedFrom="50" laneChangedTo="99"/>
+        </edge>
+        <edge id="3">
+            <lane id="3_0" sampledSeconds="759733.13" traveltime="113.60" overlapTraveltime="119.98" density="104.24" occupancy="52.12" waitingTime="16918.80" speed="0.82" departed="0" arrived="0" entered="6353" left="6310" laneChangedFrom="38" laneChangedTo="5"/>
+            <lane id="3_1" sampledSeconds="760073.76" traveltime="114.22" overlapTraveltime="120.59" density="104.29" occupancy="52.15" waitingTime="16817.86" speed="0.81" departed="0" arrived="0" entered="6292" left="6317" laneChangedFrom="5" laneChangedTo="38"/>
+        </edge>
+        <edge id="4">
+            <lane id="4_0" sampledSeconds="223630.31" traveltime="32.56" overlapTraveltime="33.63" density="26.65" occupancy="13.32" waitingTime="0.00" speed="3.33" departed="0" arrived="7281" entered="6310" left="0" laneChangedFrom="75" laneChangedTo="1048"/>
+            <lane id="4_1" sampledSeconds="204325.69" traveltime="34.44" overlapTraveltime="35.63" density="24.35" occupancy="12.17" waitingTime="0.00" speed="3.14" departed="0" arrived="5341" entered="6317" left="0" laneChangedFrom="1048" laneChangedTo="75"/>
+        </edge>
+    </interval>
+</meandata>
