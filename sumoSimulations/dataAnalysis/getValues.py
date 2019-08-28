@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 #comAcostamento
 
 #simulation times
-timeValues = [int(index) for index in range(20, 84501, 20)]
+timeValues = [int(index) for index in range(20, 84441, 20)]
 #filePointers for the files
 edgePointers = []
 lanePointers = []
@@ -20,8 +20,8 @@ dict = {}
 
 for time in timeValues:
     #file names
-    auxEdges = "../semAcostamento/lc2013/{}/edgesOutput_{}.xml".format(time, time)
-    auxLanes = "../semAcostamento/lc2013/{}/lanesOutput_{}.xml".format(time, time)
+    auxEdges = "../comAcostamento/lc2013/{}/edgesOutput_{}.xml".format(time, time)
+    auxLanes = "../comAcostamento/lc2013/{}/lanesOutput_{}.xml".format(time, time)
     #opening all files
     #fpEdges = open(auxEdges, "r")
     #edgePointers.append(fpEdges)
@@ -85,7 +85,7 @@ print (data_frame_densities)
 # data_frame_waiting_times.'1_0' = pd.to_numeric(data_frame_waiting_times.'1_0')
 #
 data_frame_waiting_times = data_frame_waiting_times.astype(float)
-ax = data_frame_waiting_times.plot(title='Waiting Time sem acostamento (LC2013)')
+ax = data_frame_waiting_times.plot(title='Waiting Time com Acostamento (LC2013)')
 ax.set_xlabel("Tempo de simulação (ms)")
 ax.set_ylabel("Waiting Time (ms)")
 plt.show()
