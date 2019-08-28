@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 #comAcostamento
 
 #simulation times
-timeValues = [int(index) for index in range(20, 10001, 20)]
+timeValues = [int(index) for index in range(20, 84501, 20)]
 #filePointers for the files
 edgePointers = []
 lanePointers = []
@@ -26,12 +26,15 @@ for time in timeValues:
     #fpEdges = open(auxEdges, "r")
     #edgePointers.append(fpEdges)
     fpLanes = open(auxLanes, "r")
-    lanePointers.append(fpLanes)
+    soup = BeautifulSoup(fpLanes, "lxml")
+    laneSoup.append(soup)
+    fpLanes.close()
+   #lanePointers.append(fpLanes)
 
 #creating all of the lane soups
-for fp in lanePointers:
-    soup = BeautifulSoup(fp, "lxml")
-    laneSoup.append(soup)
+#for fp in lanePointers:
+ #   soup = BeautifulSoup(fp, "lxml")
+  #  laneSoup.append(soup)
 
 #finding every density in all of the files
 dictDensities = {}
@@ -88,12 +91,12 @@ ax.set_ylabel("Waiting Time (ms)")
 plt.show()
 #
 # print(data_frame_densities)
-data_frame_densities = data_frame_densities.astype(float)
-ad = data_frame_densities.plot(title='Densidade (LC2013)')
-ad.set_xlabel("Tempo de simulação (ms)")
-ad.set_ylabel("Densidade (veh/km)")
+#data_frame_densities = data_frame_densities.astype(float)
+#ad = data_frame_densities.plot(title='Densidade (LC2013)')
+#ad.set_xlabel("Tempo de simulação (ms)")
+#ad.set_ylabel("Densidade (veh/km)")
 
-plt.show()
+#plt.show()
 
 #Traffic volume at the end of the lane / edge (#/h) = 3600 * left / period
 #Traffic volume at the begin of the lane / edge (#/h) = 3600 * entered / period
