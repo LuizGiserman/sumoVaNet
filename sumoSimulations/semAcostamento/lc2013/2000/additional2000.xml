@@ -1,4 +1,10 @@
 <additional>
 	<edgeData id="myEdges" file="edgesOutput_2000.xml"/>
 	<laneData id="myLanes" file="lanesOutput_2000.xml"/>
+	<entryExitDetector id="lane" freq="200" file="detectorLane.xml">
+		<detEntry lane="2_0" pos="1" />
+		<detExit lane="2_0" pos="-1" />
+		<detEntry lane="2_1" pos="1" />
+		<detExit lane="2_1" pos="-1" />
+	</entryExitDetector>
 </additional>
