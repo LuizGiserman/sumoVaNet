@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on Mon Aug 19 19:05:00 2019 by SUMO Version 0.28.0
+<!-- generated on Sat Sep 14 19:10:39 2019 by SUMO Version 0.32.0
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="./comAcostamento/lc2013/base.net.xml"/>
-        <route-files value="./comAcostamento/lc2013/base.rou.xml"/>
-        <additional-files value="./comAcostamento/lc2013/84500/additional84500.xml"/>
+        <net-file value="base.net.xml"/>
+        <route-files value="base.rou.xml"/>
+        <additional-files value="./84500/additional84500.xml"/>
     </input>
 
     <time>
@@ -17,3 +17,13 @@
     </time>
 
 </configuration>
+-->
+
+<meandata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/meandata_file.xsd">
+    <interval begin="0.00" end="84500.00" id="myEdges">
+        <edge id="1" sampledSeconds="5278338.03" traveltime="346.98" overlapTraveltime="352.86" density="200.00" occupancy="51.91" waitingTime="199609.75" speed="0.86" departed="15252" arrived="0" entered="0" left="15183" laneChangedFrom="796" laneChangedTo="796"/>
+        <edge id="2" sampledSeconds="28898260.82" traveltime="1920.22" overlapTraveltime="1926.98" density="200.00" occupancy="56.99" waitingTime="3164058.72" speed="0.52" departed="0" arrived="0" entered="15182" left="14813" laneChangedFrom="5885" laneChangedTo="5885"/>
+        <edge id="3" sampledSeconds="8006196.82" traveltime="535.93" overlapTraveltime="542.30" density="200.00" occupancy="58.83" waitingTime="103610.86" speed="0.74" departed="0" arrived="0" entered="14812" left="14717" laneChangedFrom="258" laneChangedTo="258"/>
+        <edge id="4" sampledSeconds="688606.11" traveltime="46.40" overlapTraveltime="47.17" density="40.75" occupancy="9.36" waitingTime="0.00" speed="4.35" departed="0" arrived="14708" entered="14717" left="0" laneChangedFrom="3740" laneChangedTo="3740"/>
+    </interval>
+</meandata>

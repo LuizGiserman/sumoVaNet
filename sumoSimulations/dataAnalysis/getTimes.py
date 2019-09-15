@@ -32,7 +32,7 @@ for fileName in filesmid:
 dictTop = {'Sem Acostamento': [], 'Com Acostamento': []}
 index = 200
 for soup in soupsTop:
-    
+
     #Getting the values in each file
     for interval in soup.find_all ('interval'):
         if(index <= maxValue): #first file
@@ -76,6 +76,11 @@ for interval in soupBot.find_all ('interval'):
     dictBot['Faixa do Acostamento'] = meanTimeValues
 
 
+#3LANES_WITH_SHOULDERS
+dictShoulders = {'Cima': [], 'Meio': [], 'Acostamento': []}
+for interval in sou
+
+
 dataFrame = pd.DataFrame(dictBot, index=simulationTimes)
 # print (dataFrame)
 
@@ -84,6 +89,3 @@ ax = dataFrame.plot(title="Faixa do Acostamento Comparada com as da Outra Simula
 ax.set_xlabel("Tempo de simulação (ms)")
 ax.set_ylabel("Tempo médio (ms)")
 plt.show()
-
-
-

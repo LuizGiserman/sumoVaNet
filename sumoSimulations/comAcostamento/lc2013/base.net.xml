@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on qui 30 mai 2019 11:20:10 -03 by Netedit Version 0.32.0
+<!-- generated on sáb 14 set 2019 18:55:33 -03 by Netedit Version 0.32.0
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
@@ -27,53 +27,53 @@
 
 <net version="0.27" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
 
-    <location netOffset="0.00,0.00" convBoundary="0.00,100.00,600.00,100.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+    <location netOffset="0.00,0.00" convBoundary="0.00,100.00,1900.00,100.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
 
     <edge id=":middle1_0" function="internal">
-        <lane id=":middle1_0_0" index="0" speed="13.89" length="3.49" shape="198.50,95.05 201.50,91.75"/>
-        <lane id=":middle1_0_1" index="1" speed="13.89" length="3.49" shape="198.50,95.05 201.50,95.05"/>
-        <lane id=":middle1_0_2" index="2" speed="13.89" length="3.49" shape="198.50,98.35 201.50,98.35"/>
+        <lane id=":middle1_0_0" index="0" speed="13.89" length="3.49" shape="298.50,95.05 301.50,91.75"/>
+        <lane id=":middle1_0_1" index="1" speed="13.89" length="3.49" shape="298.50,95.05 301.50,95.05"/>
+        <lane id=":middle1_0_2" index="2" speed="13.89" length="3.49" shape="298.50,98.35 301.50,98.35"/>
     </edge>
     <edge id=":middle2_0" function="internal">
-        <lane id=":middle2_0_0" index="0" speed="13.89" length="3.49" shape="398.50,91.75 401.50,95.05"/>
-        <lane id=":middle2_0_1" index="1" speed="13.89" length="3.49" shape="398.50,95.05 401.50,95.05"/>
-        <lane id=":middle2_0_2" index="2" speed="13.89" length="3.49" shape="398.50,98.35 401.50,98.35"/>
+        <lane id=":middle2_0_0" index="0" speed="13.89" length="3.49" shape="1298.50,91.75 1301.50,95.05"/>
+        <lane id=":middle2_0_1" index="1" speed="13.89" length="3.49" shape="1298.50,95.05 1301.50,95.05"/>
+        <lane id=":middle2_0_2" index="2" speed="13.89" length="3.49" shape="1298.50,98.35 1301.50,98.35"/>
     </edge>
     <edge id=":middle3_0" function="internal">
-        <lane id=":middle3_0_0" index="0" speed="13.89" length="0.10" shape="492.96,95.05 492.96,95.05"/>
-        <lane id=":middle3_0_1" index="1" speed="13.89" length="0.10" shape="492.96,98.35 492.96,98.35"/>
+        <lane id=":middle3_0_0" index="0" speed="13.89" length="0.10" shape="1700.00,95.05 1700.00,95.05"/>
+        <lane id=":middle3_0_1" index="1" speed="13.89" length="0.10" shape="1700.00,98.35 1700.00,98.35"/>
     </edge>
 
     <edge id="1" from="start" to="middle1" priority="1">
-        <lane id="1_0" index="0" speed="13.89" length="198.50" shape="0.00,95.05 198.50,95.05"/>
-        <lane id="1_1" index="1" speed="13.89" length="198.50" shape="0.00,98.35 198.50,98.35"/>
+        <lane id="1_0" index="0" speed="13.89" length="298.50" shape="0.00,95.05 298.50,95.05"/>
+        <lane id="1_1" index="1" speed="13.89" length="298.50" shape="0.00,98.35 298.50,98.35"/>
     </edge>
     <edge id="2" from="middle1" to="middle2" priority="1">
-        <lane id="2_0" index="0" speed="13.89" length="197.00" shape="201.50,91.75 398.50,91.75"/>
-        <lane id="2_1" index="1" speed="13.89" length="197.00" shape="201.50,95.05 398.50,95.05"/>
-        <lane id="2_2" index="2" speed="13.89" length="197.00" shape="201.50,98.35 398.50,98.35"/>
+        <lane id="2_0" index="0" speed="13.89" length="997.00" shape="301.50,91.75 1298.50,91.75"/>
+        <lane id="2_1" index="1" speed="13.89" length="997.00" shape="301.50,95.05 1298.50,95.05"/>
+        <lane id="2_2" index="2" speed="13.89" length="997.00" shape="301.50,98.35 1298.50,98.35"/>
     </edge>
     <edge id="3" from="middle2" to="middle3" priority="1">
-        <lane id="3_0" index="0" speed="13.89" length="91.46" shape="401.50,95.05 492.96,95.05"/>
-        <lane id="3_1" index="1" speed="13.89" length="91.46" shape="401.50,98.35 492.96,98.35"/>
+        <lane id="3_0" index="0" speed="13.89" length="398.50" shape="1301.50,95.05 1700.00,95.05"/>
+        <lane id="3_1" index="1" speed="13.89" length="398.50" shape="1301.50,98.35 1700.00,98.35"/>
     </edge>
     <edge id="4" from="middle3" to="end" priority="1">
-        <lane id="4_0" index="0" speed="13.89" length="107.04" shape="492.96,95.05 600.00,95.05"/>
-        <lane id="4_1" index="1" speed="13.89" length="107.04" shape="492.96,98.35 600.00,98.35"/>
+        <lane id="4_0" index="0" speed="13.89" length="200.00" shape="1700.00,95.05 1900.00,95.05"/>
+        <lane id="4_1" index="1" speed="13.89" length="200.00" shape="1700.00,98.35 1900.00,98.35"/>
     </edge>
 
-    <junction id="end" type="dead_end" x="600.00" y="100.00" incLanes="4_0 4_1" intLanes="" shape="600.00,93.45 600.00,99.95"/>
-    <junction id="middle1" type="priority" x="200.00" y="100.00" incLanes="1_0 1_1" intLanes=":middle1_0_0 :middle1_0_1 :middle1_0_2" shape="201.50,99.95 201.50,90.15 198.50,93.45 198.50,99.95">
+    <junction id="end" type="dead_end" x="1900.00" y="100.00" incLanes="4_0 4_1" intLanes="" shape="1900.00,93.45 1900.00,99.95"/>
+    <junction id="middle1" type="priority" x="300.00" y="100.00" incLanes="1_0 1_1" intLanes=":middle1_0_0 :middle1_0_1 :middle1_0_2" shape="301.50,99.95 301.50,90.15 298.50,93.45 298.50,99.95">
         <request index="0" response="000" foes="000" cont="0"/>
         <request index="1" response="000" foes="000" cont="0"/>
         <request index="2" response="000" foes="000" cont="0"/>
     </junction>
-    <junction id="middle2" type="zipper" x="400.00" y="100.00" incLanes="2_0 2_1 2_2" intLanes=":middle2_0_0 :middle2_0_1 :middle2_0_2" shape="401.50,99.95 401.50,93.45 398.50,90.15 398.50,99.95">
+    <junction id="middle2" type="zipper" x="1300.00" y="100.00" incLanes="2_0 2_1 2_2" intLanes=":middle2_0_0 :middle2_0_1 :middle2_0_2" shape="1301.50,99.95 1301.50,93.45 1298.50,90.15 1298.50,99.95">
         <request index="0" response="010" foes="010" cont="0"/>
         <request index="1" response="001" foes="001" cont="0"/>
         <request index="2" response="000" foes="000" cont="0"/>
     </junction>
-    <junction id="middle3" type="allway_stop" x="492.96" y="100.00" incLanes="3_0 3_1" intLanes=":middle3_0_0 :middle3_0_1" shape="492.96,99.95 492.96,93.45 492.96,99.95">
+    <junction id="middle3" type="allway_stop" x="1700.00" y="100.00" incLanes="3_0 3_1" intLanes=":middle3_0_0 :middle3_0_1" shape="1700.00,99.95 1700.00,93.45 1700.00,99.95">
         <request index="0" response="00" foes="00" cont="0"/>
         <request index="1" response="00" foes="00" cont="0"/>
     </junction>
