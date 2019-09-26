@@ -1,5 +1,5 @@
 <additional>
-	<edgeData id="myEdges" file="edgesOutput_84500.xml"/>
+	<!-- <edgeData id="myEdges" file="edgesOutput_84500.xml"/>
 	<laneData id="myLanes" file="lanesOutput_84500.xml"/>
 
 	<entryExitDetector id="topLane" freq="200" file="detectorTop.xml">
@@ -10,6 +10,7 @@
 	<entryExitDetector id="midLane" freq="200" file="detectorMid.xml">
 		<detEntry lane="2_1" pos="1" />
 		<detExit lane="2_1" pos="-1" />
-	</entryExitDetector>
-	
+	</entryExitDetector> -->
+	<laneAreaDetector id="top" lane="2_0" freq="200" file="laneDetTop.xml"/>
+	<laneAreaDetector id="mid" lane="2_1" freq="200" file="laneDetMid.xml"/>
 </additional>

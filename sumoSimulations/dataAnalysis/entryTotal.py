@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 #comAcostamento
 
 #simulation times
-timeValues = [int(index) for index in range(20, 10001, 20)]
+timeValues = [int(index) for index in range(20, 84001, 20)]
 #filePointers for the files
 semPointers = []
 comPointers = []
