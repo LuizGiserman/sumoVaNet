@@ -29,7 +29,7 @@ dictComAcostamento = {'(com)Faixa de cima' : [], '(com)Faixa do meio': [], '(com
 for index in range(0, len(soupsComAcostamento)):
     for interval in soupsComAcostamento[index].find_all ('interval'):
         meanSpeed = interval.get('meanspeed')
-        meanTravelTime = length/float(meanSpeed)
+        meanTravelTime = length/(60 * float(meanSpeed))
         if(index == 0):
             dictComAcostamento['(com)Faixa de cima'].append(meanTravelTime)
         elif(index == 1):
@@ -43,7 +43,7 @@ dictSemAcostamento = {'(sem)Faixa de cima' : [], '(sem)Faixa de baixo': []}
 for index in range(0, len(soupsSemAcostamento)):
     for interval in soupsSemAcostamento[index].find_all ('interval'):
         meanSpeed = interval.get('meanspeed')
-        meanTravelTime = length/float(meanSpeed)
+        meanTravelTime = length/(60*float(meanSpeed))
         if(index == 0):
             dictSemAcostamento['(sem)Faixa de cima'].append(meanTravelTime)
         elif(index == 1):
@@ -58,5 +58,5 @@ dataFrame = pd.DataFrame(dictDosDois, index=simulationTimes)
 dataFrame = dataFrame.astype (float)
 ax = dataFrame.plot(title="Simulação sem acostamento", color=[(1, 0.6, 0.2), (0.7, 0.6, 0.2), (0.7, 0.3, 0.1), (0.2, 0.60, 0.07), (0.2, 0.40, 0.07)])
 ax.set_xlabel("Tempo de simulação (ms)")
-ax.set_ylabel("Tempo médio (ms)")
+ax.set_ylabel("Tempo médio (m)")
 plt.show()
