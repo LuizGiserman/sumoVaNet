@@ -1,19 +1,10 @@
 <routes>
-
-	<vType id="BadDriver" accel="2.6" decel="4.5" color="1,0,0" vClass="custom1" length="5.0" minGap="2.5"/>
-
-	<vType id="GoodDriver" accel="2.6" decel="4.5" color="0,0,1" vClass="custom2" length="5.0" minGap="2.5"/>
-
-
-<!--	<flow id="BadSwarm" color="1,0,0" begin="0"  probability="0" departLane="random" type="BadDriver">
-		<route edges="1 2 3 4"/>
-	</flow> -->
-
-	<flow id="GoodSwarm" color="0,0,1" begin="0" probability="0.9" departLane="random" type="GoodDriver">
+	<vType id="BadDriver" carFollowModel="IDM" accel="3" decel="3" color="1,0,0" vClass="custom1" length="4.0" minGap="2.0" stepping="1"/>
+	<vType id="GoodDriver" carFollowModel="IDM" accel="3" decel="3" color="0,0,1" vClass="custom2" length="4.0" minGap="2.0" stepping="1"/>
+	<flow id="BadSwarm" color="1,0,0" begin="0"  probability="0.667" departLane="random" type="BadDriver">
 		<route edges="1 2 3 4"/>
 	</flow>
-
-
-
-
+	<flow id="GoodSwarm" color="0,0,1" begin="0" probability="0.7" departLane="random" type="GoodDriver">
+		<route edges="1 2 3 4"/>
+	</flow>
 </routes>

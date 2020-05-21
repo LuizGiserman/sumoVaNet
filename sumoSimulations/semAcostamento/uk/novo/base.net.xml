@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on qua 15 abr 2020 20:26:06 -03 by Netedit Version 0.32.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="base.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="base.net.xml"/>
+    </output>
+
+    <processing>
+        <no-turnarounds value="true"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+        <junctions.corner-detail value="0"/>
+        <rectangular-lane-cut value="false"/>
+        <walkingareas value="false"/>
+    </processing>
+
+</configuration>
+-->
+
+<net version="0.27" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,100.00,758.00,100.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id=":middle1_0" function="internal">
+        <lane id=":middle1_0_0" index="0" disallow="custom2" speed="13.89" length="0.10" shape="100.00,95.05 100.00,95.05"/>
+        <lane id=":middle1_0_1" index="1" speed="13.89" length="0.10" shape="100.00,98.35 100.00,98.35"/>
+    </edge>
+    <edge id=":middle2_0" function="internal">
+        <lane id=":middle2_0_0" index="0" speed="13.89" length="0.10" shape="658.00,95.05 658.00,95.05"/>
+        <lane id=":middle2_0_1" index="1" speed="13.89" length="0.10" shape="658.00,98.35 658.00,98.35"/>
+    </edge>
+
+    <edge id="1" from="start" to="middle1" priority="1" length="100.00">
+        <lane id="1_0" index="0" speed="13.89" length="100.00" shape="0.00,95.05 100.00,95.05"/>
+        <lane id="1_1" index="1" speed="13.89" length="100.00" shape="0.00,98.35 100.00,98.35"/>
+    </edge>
+    <edge id="2" from="middle1" to="middle2" priority="1" length="558.00">
+        <lane id="2_0" index="0" disallow="custom2" speed="13.89" length="558.00" shape="100.00,95.05 658.00,95.05"/>
+        <lane id="2_1" index="1" speed="13.89" length="558.00" shape="100.00,98.35 658.00,98.35"/>
+    </edge>
+    <edge id="3" from="middle2" to="middle3" priority="1" length="100.00">
+        <lane id="3_0" index="0" speed="13.89" length="100.00" shape="658.00,95.05 758.00,95.05"/>
+        <lane id="3_1" index="1" speed="13.89" length="100.00" shape="658.00,98.35 758.00,98.35"/>
+    </edge>
+
+    <junction id="middle1" type="priority" x="100.00" y="100.00" incLanes="1_0 1_1" intLanes=":middle1_0_0 :middle1_0_1" shape="100.00,99.95 100.00,93.45 100.00,99.95">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="middle2" type="zipper" x="658.00" y="100.00" incLanes="2_0 2_1" intLanes=":middle2_0_0 :middle2_0_1" shape="658.00,99.95 658.00,93.45 658.00,99.95">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="middle3" type="dead_end" x="758.00" y="100.00" incLanes="3_0 3_1" intLanes="" shape="758.00,93.45 758.00,99.95"/>
+    <junction id="start" type="dead_end" x="0.00" y="100.00" incLanes="" intLanes="" shape="0.00,99.95 0.00,93.45"/>
+
+    <connection from="1" to="2" fromLane="0" toLane="0" via=":middle1_0_0" dir="s" state="M"/>
+    <connection from="1" to="2" fromLane="1" toLane="1" via=":middle1_0_1" dir="s" state="M"/>
+    <connection from="2" to="3" fromLane="0" toLane="0" via=":middle2_0_0" dir="s" state="M"/>
+    <connection from="2" to="3" fromLane="1" toLane="1" via=":middle2_0_1" dir="s" state="M"/>
+
+    <connection from=":middle1_0" to="2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":middle1_0" to="2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":middle2_0" to="3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":middle2_0" to="3" fromLane="1" toLane="1" dir="s" state="M"/>
+
+</net>
